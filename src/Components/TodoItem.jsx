@@ -1,14 +1,15 @@
 import React from 'react';
-
+import { Trash } from "lucide-react";
 const TodoItem = ({ todo, onDelete }) => {
   return (
-    <li className="flex justify-between items-center bg-gray-100 p-2 rounded-md hover:bg-gray-200 transition">
+    <li className="flex justify-between items-center bg-white p-2 rounded-md hover:bg-gray-200 transition">
       <span>{todo.text}</span>
+      
       <button 
         onClick={() => onDelete(todo.id)}
-        className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
+        className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600 transition "
       >
-        Delete
+        <Trash size={20}/>
       </button>
     </li>
   )

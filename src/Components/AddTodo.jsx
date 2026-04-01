@@ -5,7 +5,11 @@ const AddTodo = ({ onAdd }) => {
 
   const handleSumbit = (e) => {
     e.preventDefault();
-    if (text.trim() === "") return;
+    if (text.trim() === "")
+      { 
+        alert("Task can't be empty");
+        return;
+      }
     onAdd(text);
     setText("");
   }
